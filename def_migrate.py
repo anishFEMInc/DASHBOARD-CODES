@@ -76,9 +76,9 @@ def multi_migrate(start_date,end_date):
 	}
 
 
-	for data in raw.raw_data:
-		event = data['event']
-
+#	for data in raw.raw_data:
+	while(i<length)				## often a good idea if you want to resume from the point the code stopped 
+		event = data['event']		## for reasons like internet/ power loss etc....
 		if event in EVENT_NAME_MAP:
 			event = EVENT_NAME_MAP[event]
 		props = raw.raw_data[i]['properties']
